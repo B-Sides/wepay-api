@@ -78,12 +78,12 @@ Response from these API calls will be converted to `Hashied::Mash` object to mak
 Refer to [https://github.com/intridea/hashie#mash](https://github.com/intridea/hashie#mash) for more details.
 
 #### User's authorized calls
-After configured, the http client from `wepay-api` will try to make user of `access_token` as the default authorization of the api calls.
+After configured, the http client from `wepay-api` will try to make use of app's `access_token` (in the configuration) as the default authorization of the api calls.
 There are some situations that user's `access_token` need to be used, e.g. create an account for the user, so we can embed the user's `access_token`
 in the call by adding field `access_token` to the params, for example:
 
 ```ruby
-Wepay.checkout.create(
+Wepay.account.create(
   ...
   access_token:   "user's access token"
 )

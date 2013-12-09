@@ -15,7 +15,7 @@ Or install it yourself as:
 ## Configuration
 `wepay-api` can be configured as following:
 
-```
+```ruby
 Wepay.configure do |config|
   config.client_id     = ...  # app id                                  (compulsory)
   config.client_secret = ...  # app secret                              (compulsory)
@@ -34,7 +34,7 @@ end
 #### OAuth authorization URL
 To get the authorization URL for OAuth, use following method:
 
-```
+```ruby
 Wepay.authorization_url(redirect_uri)
 ```
 
@@ -43,7 +43,7 @@ Refer to [https://stage.wepay.com/developer/reference/oauth2#authorize](https://
 #### User's access token
 To get the access token from user, use following method:
 
-```
+```ruby
 Wepay.get_access_token(code, redirect_uri)
 ```
 
@@ -61,14 +61,15 @@ Wepay.`api_type`.`api_method`(params)
 
 For example, to create a checkout:
 
-```
+```ruby
 Wepay.checkout.create(
-  short_description:	"my description for the checkout",
+  short_description:  "my description for the checkout",
   type:               "GOODS",
   fee_payer:          "payee",
-  amount:	            10,
+  amount:	          10,
   redirect_uri:       "redirect_uri",
   ...
+)
 ```
 
 `params` is a Hash which captures the whole query as in Wepay API documentation, so refer to the documentation if any doubts.
@@ -81,7 +82,7 @@ After configured, the http client from `wepay-api` will try to make user of `acc
 There are some situations that user's `access_token` need to be used, e.g. create an account for the user, so we can embed the user's `access_token`
 in the call by adding field `access_token` to the params, for example:
 
-```
+```ruby
 Wepay.checkout.create(
   ...
   access_token:   "user's access token"

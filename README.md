@@ -50,6 +50,9 @@ Wepay.get_access_token(code, redirect_uri)
 Refer to [https://stage.wepay.com/developer/reference/oauth2#token](https://stage.wepay.com/developer/reference/oauth2#token) for more details.
 
 ### API
+#### Available API
+  - [/account](https://github.com/burnsidedigital/wepay-api/blob/master/lib/wepay/api/account.rb)
+  - [/checkout](https://github.com/burnsidedigital/wepay-api/blob/master/lib/wepay/api/checkout.rb)
 
 #### API calls
 In order to make an API call, we can follow the convention for the method call:

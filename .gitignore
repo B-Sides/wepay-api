@@ -18,3 +18,4 @@ tmp
 *.iml
 .idea
 .rvmrc
+spec/settings.yml

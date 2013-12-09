@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/account/create
+    body:
+      encoding: US-ASCII
+      string: name=New+Account&description=Created+by+API
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 05 Dec 2013 10:46:22 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - wepay=28q0mcvp2c90sjn6bn43e7s0t5; path=/; domain=stage.wepay.com; secure; HttpOnly, wepay=28q0mcvp2c90sjn6bn43e7s0t5; path=/; domain=stage.wepay.com; secure; httponly
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: US-ASCII
+      string: '{"account_id":123456,"account_uri":"https:\/\/stage.wepay.com\/account\/123456"}'
+    http_version:
+  recorded_at: Thu, 05 Dec 2013 10:46:22 GMT
+recorded_with: VCR 2.8.0

@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.wepayapi.com/v2/checkout?checkout_id=1234567890
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 04 Dec 2013 04:08:41 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: US-ASCII
+      string: '{"checkout_id":1234567890,"account_id":<ACCOUNT_ID>,"type":"GOODS","checkout_uri":"https:\/\/stage.wepay.com\/api\/checkout\/1234567890\/541d45b8","short_description":"test
+        checkout creation","currency":"USD","amount":10,"fee_payer":"payer","state":"expired","soft_descriptor":"WPY*Descriptor
+        ","redirect_uri":"","auto_capture":<USING_STAGE>,"app_fee":0,"create_time":1386054830,"mode":"regular","amount_refunded":0,"amount_charged_back":0,"tax":0,"dispute_uri":""}'
+    http_version:
+  recorded_at: Wed, 04 Dec 2013 04:08:42 GMT
+recorded_with: VCR 2.8.0

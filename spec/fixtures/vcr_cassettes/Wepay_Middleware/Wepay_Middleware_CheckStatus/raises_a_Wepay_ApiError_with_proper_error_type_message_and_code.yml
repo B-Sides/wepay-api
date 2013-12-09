@@ -1,0 +1,35 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage.wepayapi.com/v2/null
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+  response:
+    status:
+      code: 501
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 03 Dec 2013 09:34:30 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: '{"error":"invalid_request","error_description":"that is not a recognized
+        WePay API call","error_code":1001}'
+    http_version:
+  recorded_at: Tue, 03 Dec 2013 09:34:31 GMT
+recorded_with: VCR 2.8.0

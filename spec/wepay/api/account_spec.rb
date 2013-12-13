@@ -11,16 +11,23 @@ describe Wepay::Api::Account do
         access_token:   'access_token'
       )
 
-      expect(data).to have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type
+      expect(data).to have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type, :create_time
     end
   end
 
   describe "#find" do
-    # to be added
+    it 'finds the accounts of the user associated with the access token' do
+      data = it.find(
+        access_token:   'access_token'
+      )
+
+      expect(data).to       be_a Array
+      expect(data.first).to have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type, :create_time
+    end
   end
 
   describe "#create" do
-    it "creates an account for a user" do
+    it "creates an account" do
       data = it.create(
         name:         "New Account",
         description:  "Created by API",
@@ -32,26 +39,61 @@ describe Wepay::Api::Account do
   end
 
   describe "#modify" do
-    # to be added
+    it "modifies an account" do
+      data = it.modify(
+        account_id:   "123456",
+        name:         "New Account Name",
+        access_token: 'access_token'
+      )
+
+      expect(data).to       have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type, :create_time
+      expect(data.name).to  eq "New Account Name"
+    end
   end
 
   describe "#delete" do
-    # to be added
+    it "deletes an account" do
+      data = it.delete(
+        account_id:   "123456",
+        access_token: 'access_token'
+      )
+
+      expect(data).to       have_keys :account_id, :state
+      expect(data.state).to eq "deleted"
+    end
   end
 
   describe "#balance" do
-    # to be added
+    it "gets balance of an account" do
+      data = it.balance(
+        account_id:   "123456",
+        access_token: 'access_token'
+      )
+
+      expect(data).to have_keys :pending_balance, :available_balance, :currency
+    end
   end
 
   describe "#add_bank" do
-    # to be added
+    it "adds bank to an account" do
+      data = it.add_bank(
+        account_id:   "123456",
+        access_token: 'access_token'
+      )
+
+      expect(data).to have_keys :account_id, :add_bank_uri
+    end
   end
 
   describe "#set_tax" do
-    # to be added
+    it "sets tax of an account" do
+      # to be added
+    end
   end
 
   describe "#get_tax" do
-    # to be added
+    it "gets tax of an account" do
+      # to be added
+    end
   end
 end

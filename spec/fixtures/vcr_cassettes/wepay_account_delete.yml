@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/account/delete
+    body:
+      encoding: US-ASCII
+      string: account_id=123456
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 13 Dec 2013 08:01:54 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - wepay=u9p97k43btg1qi7j99od7n6s00; path=/; domain=stage.wepay.com; secure;
+        HttpOnly, wepay=u9p97k43btg1qi7j99od7n6s00; path=/; domain=stage.wepay.com;
+        secure; httponly
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"account_id":123456,"state":"deleted"}'
+    http_version: 
+  recorded_at: Fri, 13 Dec 2013 08:01:55 GMT
+recorded_with: VCR 2.8.0

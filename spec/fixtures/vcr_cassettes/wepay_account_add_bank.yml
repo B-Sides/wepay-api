@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/account/add_bank
+    body:
+      encoding: US-ASCII
+      string: account_id=123456
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 13 Dec 2013 08:11:12 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"account_id":123456,"add_bank_uri":"https:\/\/stage.wepay.com\/api\/account_add_bank\/123456\/65d2737e"}'
+    http_version: 
+  recorded_at: Fri, 13 Dec 2013 08:11:12 GMT
+recorded_with: VCR 2.8.0

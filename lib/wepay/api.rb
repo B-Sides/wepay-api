@@ -11,5 +11,9 @@ module Wepay
     def preapproval
       Wepay::Api::Preapproval.new
     end
+
+    def withdrawal
+      Wepay::Api::Withdrawal.new
+    end
   end
 end

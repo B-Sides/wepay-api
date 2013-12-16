@@ -12,6 +12,7 @@ require 'wepay/api/base'
 require 'wepay/api/checkout'
 require 'wepay/api/account'
 require 'wepay/api/preapproval'
+require 'wepay/api/withdrawal'
 
 module Wepay
   extend Wepay::Configuration

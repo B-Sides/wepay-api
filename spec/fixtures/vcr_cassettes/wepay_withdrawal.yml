@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/withdrawal
+    body:
+      encoding: UTF-8
+      string: '{"withdrawal_id":123456789}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 04:46:37 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"withdrawal_id":123456789,"state":"new","withdrawal_uri":"https:\/\/stage.wepay.com\/api\/withdrawal\/123456789\/f57129c710db1bfb69ce042c938cd0b9","callback_uri":null,"redirect_uri":"\/status\/withdrawal_complete\/123456789","create_time":1387169032,"capture_time":0,"recipient_name":"","recipient_confirmed":false,"type":"ach","amount":0,"note":"","account_id":123456}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 04:46:37 GMT
+recorded_with: VCR 2.8.0

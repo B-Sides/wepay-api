@@ -51,8 +51,12 @@ Refer to [https://stage.wepay.com/developer/reference/oauth2#token](https://stag
 
 ### API
 #### Available API
-  - [/account](https://github.com/burnsidedigital/wepay-api/blob/master/lib/wepay/api/account.rb)
-  - [/checkout](https://github.com/burnsidedigital/wepay-api/blob/master/lib/wepay/api/checkout.rb)
+  - [/account](lib/wepay/api/account.rb)
+  - [/checkout](lib/wepay/api/checkout.rb)
+  - [/preapproval](lib/wepay/api/preapproval.rb)
+  - [/subscription_plan](lib/wepay/api/subscription_plan.rb)
+  - [/subscription](lib/wepay/api/subscription.rb)
+  - [/withdrawal](lib/wepay/api/withdrawal.rb)
 
 #### API calls
 In order to make an API call, we can follow the convention for the method call:

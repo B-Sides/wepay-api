@@ -58,6 +58,8 @@ Refer to [https://stage.wepay.com/developer/reference/oauth2#token](https://stag
   - [/subscription](lib/wepay/api/subscription.rb)
   - [/withdrawal](lib/wepay/api/withdrawal.rb)
 
+Notice: WePay is using **POST** for **ALL** the requests, **even the API method says "get_..."**
+
 #### API calls
 In order to make an API call, we can follow the convention for the method call:
 

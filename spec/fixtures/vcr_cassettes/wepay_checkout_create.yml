@@ -5,7 +5,7 @@ http_interactions:
     uri: https://stage.wepayapi.com/v2/checkout/create
     body:
       encoding: UTF-8
-      string: '{"account_id":"<ACCOUNT_ID>", "short_description":"Film payment", "type":"GOODS", "amount":"10"}'
+      string: '{"account_id":123456, "short_description":"Payment", "type":"GOODS", "amount":"10"}'
     headers:
       User-Agent:
       - Faraday v0.8.8

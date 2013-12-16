@@ -28,7 +28,7 @@ describe Wepay::Api::Checkout do
     it "creates a checkout" do
       data = it.create(
         account_id:         123456,
-        short_description:	"Film payment",
+        short_description:	"Payment",
         type:               "GOODS",
         amount:	            10
       )

@@ -7,7 +7,7 @@ describe Wepay::Api::SubscriptionPlan do
   describe "#show" do
     it "shows the info of a subscription plan" do
       data = it.show(
-        subscription_plan_id:   397668101,
+        subscription_plan_id:   123456789,
         access_token:           "access_token"
       )
 
@@ -45,7 +45,7 @@ describe Wepay::Api::SubscriptionPlan do
   describe "#delete" do
     it "deletes a subscription plan" do
       data = it.delete(
-        subscription_plan_id:       397668101,
+        subscription_plan_id:       123456789,
         reason:                     "no resson",
         access_token:               "access_token"
       )
@@ -58,7 +58,7 @@ describe Wepay::Api::SubscriptionPlan do
   describe "#get_button" do
     it "gets button of a subscription plan" do
       data = it.get_button(
-        subscription_plan_id:       397668101,
+        subscription_plan_id:       123456789,
         button_type:                "subscription_plan",
         account_id:                 123456,
         access_token:               "access_token"
@@ -71,7 +71,7 @@ describe Wepay::Api::SubscriptionPlan do
   describe "#modify" do
     it "modifies a subscription plan" do
       data = it.modify(
-        subscription_plan_id:       397668101,
+        subscription_plan_id:       123456789,
         callback_uri:               "https://www.example.com/ipn/12345",
         access_token:               "access_token"
       )

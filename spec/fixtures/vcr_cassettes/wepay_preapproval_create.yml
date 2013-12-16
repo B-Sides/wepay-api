@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/preapproval/create
+    body:
+      encoding: UTF-8
+      string: '{"short_description":"Payment","period":"yearly","amount":10,"account_id":123456}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 03:53:04 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"preapproval_id":123456789,"preapproval_uri":"https:\/\/stage.wepay.com\/api\/preapproval\/123456789\/377e07c4"}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 03:53:04 GMT
+recorded_with: VCR 2.8.0

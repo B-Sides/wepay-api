@@ -7,5 +7,9 @@ module Wepay
     def checkout
       Wepay::Api::Checkout.new
     end
+
+    def preapproval
+      Wepay::Api::Preapproval.new
+    end
   end
 end

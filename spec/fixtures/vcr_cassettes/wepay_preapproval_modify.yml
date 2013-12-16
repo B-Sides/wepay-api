@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/preapproval/modify
+    body:
+      encoding: UTF-8
+      string: '{"preapproval_id":123456789,"callback_uri":"https://www.example.com/ipn/12345"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 04:06:08 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"preapproval_id":123456789,"account_id":123456,"preapproval_uri":"https:\/\/stage.wepay.com\/api\/preapproval\/123456789\/377e07c4","short_description":"Payment","currency":"USD","amount":10,"fee_payer":"payer","state":"approved","redirect_uri":null,"app_fee":0,"period":"yearly","frequency":1,"start_time":1387165984,"end_time":1544950614,"auto_recur":false,"create_time":1387165984,"manage_uri":"https:\/\/stage.wepay.com\/preapproval\/view\/123456789\/377e07c4","mode":"regular","callback_uri":"https:\/\/www.example.com\/ipn\/12345","payer_email":"user@example.com","payer_name":"Test
+        User 1"}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 04:06:09 GMT
+recorded_with: VCR 2.8.0

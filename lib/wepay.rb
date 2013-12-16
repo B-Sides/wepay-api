@@ -14,6 +14,7 @@ require 'wepay/api/account'
 require 'wepay/api/preapproval'
 require 'wepay/api/withdrawal'
 require 'wepay/api/subscription_plan'
+require 'wepay/api/subscription'
 
 module Wepay
   extend Wepay::Configuration

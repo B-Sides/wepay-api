@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/subscription/create
+    body:
+      encoding: UTF-8
+      string: '{"subscription_plan_id":1234567890}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 05:27:18 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - wepay=qcdln8bi2vf413kl0mhr1lhh24; path=/; domain=stage.wepay.com; secure;
+        HttpOnly, wepay=qcdln8bi2vf413kl0mhr1lhh24; path=/; domain=stage.wepay.com;
+        secure; httponly
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"subscription_id":123456789,"subscription_uri":"https:\/\/stage.wepay.com\/subscriptions\/123456789\/b848e5cb"}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 05:27:18 GMT
+recorded_with: VCR 2.8.0

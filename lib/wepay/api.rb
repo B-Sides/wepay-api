@@ -19,5 +19,9 @@ module Wepay
     def subscription_plan
       Wepay::Api::SubscriptionPlan.new
     end
+
+    def subscription
+      Wepay::Api::Subscription.new
+    end
   end
 end

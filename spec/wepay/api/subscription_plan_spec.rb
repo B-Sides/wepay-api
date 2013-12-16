@@ -16,7 +16,7 @@ describe Wepay::Api::SubscriptionPlan do
   end
 
   describe "#find" do
-    it "finds all the subscription_plans of an account" do
+    it "finds all the subscription plans of an account" do
       data = it.find(
         account_id:         123456,
         access_token:       "access_token"

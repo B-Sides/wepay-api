@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/subscription/cancel
+    body:
+      encoding: UTF-8
+      string: '{"subscription_id":123456789,"reason":"no reason"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 05:35:02 GMT
+      content-type:
+      - text/html; charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"subscription_id":123456789,"reason":"no reason"}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 05:35:03 GMT
+recorded_with: VCR 2.8.0

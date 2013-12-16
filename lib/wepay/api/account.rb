@@ -7,7 +7,7 @@ module Wepay
       # @docs [/account](https://www.wepay.com/developer/reference/account#lookup)
       #
       def show(params)
-        get 'account', params
+        post 'account', params
       end
 
       ##
@@ -16,7 +16,7 @@ module Wepay
       # @docs [/account/find](https://www.wepay.com/developer/reference/account#find)
       #
       def find(params)
-        get 'account/find', params
+        post 'account/find', params
       end
 
       ##
@@ -52,7 +52,7 @@ module Wepay
       # @docs [/account/balance](https://www.wepay.com/developer/reference/account#balance)
       #
       def balance(params)
-        get 'account/balance', params
+        post 'account/balance', params
       end
 
       ##
@@ -79,7 +79,7 @@ module Wepay
       # @docs [/account/get_tax](https://www.wepay.com/developer/reference/account#get_tax)
       #
       def get_tax(params)
-        get 'account/get_tax', params
+        post 'account/get_tax', params
       end
     end
   end

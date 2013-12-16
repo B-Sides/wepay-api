@@ -4,15 +4,15 @@ http_interactions:
     method: post
     uri: https://stage.wepayapi.com/v2/account/add_bank
     body:
-      encoding: US-ASCII
-      string: account_id=123456
+      encoding: UTF-8
+      string: '{"account_id":"123456"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
       - Bearer access_token
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
   response:
     status:
       code: 200

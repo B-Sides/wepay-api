@@ -87,13 +87,24 @@ describe Wepay::Api::Account do
 
   describe "#set_tax" do
     it "sets tax of an account" do
-      # to be added
+      data = it.set_tax(
+        account_id:   "123456",
+        access_token: 'access_token',
+        taxes:        [{"percent" => 10,"country" => "US","state" => "CA","zip" => "94025"}]
+      )
+
+      expect(data.first).to have_keys :percent, :country, :state, :zip
     end
   end
 
   describe "#get_tax" do
     it "gets tax of an account" do
-      # to be added
+      data = it.get_tax(
+        account_id:   "123456",
+        access_token: 'access_token'
+      )
+
+      expect(data.first).to have_keys :percent, :country, :state, :zip
     end
   end
 end

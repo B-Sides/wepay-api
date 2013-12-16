@@ -4,15 +4,15 @@ http_interactions:
     method: post
     uri: https://stage.wepayapi.com/v2/account/create
     body:
-      encoding: US-ASCII
-      string: name=New+Account&description=Created+by+API
+      encoding: UTF-8
+      string: '{"name":"New+Account", "description":"Created+by+API"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
       - Bearer access_token
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
   response:
     status:
       code: 200

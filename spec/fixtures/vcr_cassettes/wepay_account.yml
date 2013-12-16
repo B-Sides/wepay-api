@@ -1,16 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://stage.wepayapi.com/v2/account?account_id=123456
+    method: post
+    uri: https://stage.wepayapi.com/v2/account
     body:
-      encoding: US-ASCII
-      string: ''
+       encoding: UTF-8
+       string: '{"account_id":"123456"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
       - Bearer access_token
+      Content-Type:
+      - application/json
   response:
     status:
       code: 200

@@ -1,16 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: get
+    method: post
     uri: https://stage.wepayapi.com/v2/account/find
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
       - Bearer access_token
+      Content-Type:
+      - application/json
   response:
     status:
       code: 200

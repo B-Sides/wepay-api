@@ -4,6 +4,8 @@ http_interactions:
     method: post
     uri: https://stage.wepayapi.com/v2/account/modify
     body:
+      encoding: UTF-8
+      string: '{"account_id":"123456", "name":"New+Account+Name"}'
       encoding: US-ASCII
       string: account_id=123456&name=New+Account+Name
     headers:
@@ -12,7 +14,7 @@ http_interactions:
       Authorization:
       - Bearer access_token
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
   response:
     status:
       code: 200

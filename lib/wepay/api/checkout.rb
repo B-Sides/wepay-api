@@ -7,7 +7,7 @@ module Wepay
       # @docs [/checkout](https://www.wepay.com/developer/reference/checkout#lookup)
       #
       def show(params)
-        get 'checkout', params
+        post 'checkout', params
       end
 
       ##
@@ -16,7 +16,7 @@ module Wepay
       # @docs [/checkout/find](https://www.wepay.com/developer/reference/checkout#find)
       #
       def find(params)
-        get 'checkout/find', params
+        post 'checkout/find', params
       end
 
       ##

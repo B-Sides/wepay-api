@@ -1,16 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://stage.wepayapi.com/v2/checkout/find?account_id=123456
+    method: post
+    uri: https://stage.wepayapi.com/v2/checkout/find
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"account_id":"123456"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
       - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
   response:
     status:
       code: 200
@@ -29,7 +31,7 @@ http_interactions:
       strict-transport-security:
       - max-age=2592000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: '[{"checkout_id":706495338,"account_id":123456,"type":"GOODS","checkout_uri":"https:\/\/stage.wepay.com\/api\/checkout\/706495338\/8a1fc59e","short_description":"Film
         payment","currency":"USD","amount":10,"fee_payer":"payer","state":"expired","soft_descriptor":"WPY*Descriptor","redirect_uri":"","auto_capture":<USING_STAGE>,"app_fee":0,"create_time":1386130124,"mode":"regular","amount_refunded":0,"amount_charged_back":0,"tax":0,"dispute_uri":""},{"checkout_id":958816232,"account_id":123456,"type":"GOODS","checkout_uri":"https:\/\/stage.wepay.com\/api\/checkout\/958816232\/6444a979","short_description":"Film
         payment","currency":"USD","amount":10,"fee_payer":"payer","state":"expired","soft_descriptor":"WPY*Descriptor","redirect_uri":"","auto_capture":<USING_STAGE>,"app_fee":0,"create_time":1386129981,"mode":"regular","amount_refunded":0,"amount_charged_back":0,"tax":0,"dispute_uri":""},{"checkout_id":1537338904,"account_id":123456,"type":"GOODS","checkout_uri":"https:\/\/stage.wepay.com\/api\/checkout\/1537338904\/28673036","short_description":"Film

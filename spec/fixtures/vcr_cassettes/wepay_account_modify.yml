@@ -5,9 +5,7 @@ http_interactions:
     uri: https://stage.wepayapi.com/v2/account/modify
     body:
       encoding: UTF-8
-      string: '{"account_id":"123456", "name":"New+Account+Name"}'
-      encoding: UTF-8
-      string: account_id=123456&name=New+Account+Name
+      string: '{"account_id":"123456", "name":"New Account Name"}'
     headers:
       User-Agent:
       - Faraday v0.8.8

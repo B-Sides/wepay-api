@@ -4,15 +4,15 @@ http_interactions:
     method: post
     uri: https://stage.wepayapi.com/v2/checkout/modify
     body:
-      encoding: US-ASCII
-      string: checkout_id=1234567890&callback_uri=https%3A%2F%2Fwww.example.com%2Fipn%2F12345
+      encoding: UTF-8
+      string: '{"checkout_id":"1234567890", "callback_uri":"https://www.example.com/ipn/12345"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
       - Bearer <ACCESS_TOKEN>
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
   response:
     status:
       code: 200
@@ -31,7 +31,7 @@ http_interactions:
       strict-transport-security:
       - max-age=2592000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: '{"checkout_id":1234567890,"account_id":<ACCOUNT_ID>,"type":"GOODS","checkout_uri":"https:\/\/stage.wepay.com\/api\/checkout\/1234567890\/8e4bc966","short_description":"Film
         payment","currency":"USD","amount":10,"fee_payer":"payee_from_app","state":"new","soft_descriptor":"WPY*Juntobox
         Films","redirect_uri":"","auto_capture":false,"app_fee":0,"create_time":1386134440,"mode":"regular","amount_refunded":0,"amount_charged_back":0,"callback_uri":"https:\/\/www.example.com\/ipn\/12345","tax":0,"dispute_uri":""}'

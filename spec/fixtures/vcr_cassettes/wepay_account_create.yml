@@ -5,7 +5,7 @@ http_interactions:
     uri: https://stage.wepayapi.com/v2/account/create
     body:
       encoding: UTF-8
-      string: '{"name":"New+Account", "description":"Created+by+API"}'
+      string: '{"name":"New+Account", "description":"Created by API"}'
     headers:
       User-Agent:
       - Faraday v0.8.8

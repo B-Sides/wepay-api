@@ -6,7 +6,7 @@ module Wepay
     def initialize
       super() do |builder|
         # Request
-        builder.use Faraday::Request::UrlEncoded
+        builder.use FaradayMiddleware::EncodeJson
       end
     end
 

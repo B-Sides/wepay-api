@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/subscription_plan/modify
+    body:
+      encoding: UTF-8
+      string: '{"subscription_plan_id":123456789,"callback_uri":"https://www.example.com/ipn/12345"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 05:14:51 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - wepay=86d5vn00o17olnkdbsavoq8tu0; path=/; domain=stage.wepay.com; secure;
+        HttpOnly, wepay=86d5vn00o17olnkdbsavoq8tu0; path=/; domain=stage.wepay.com;
+        secure; httponly
+      expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"subscription_plan_id":123456789,"account_id":123456,"name":"Subscription
+        plan 1","short_description":"Short description","currency":"USD","amount":10,"period":"yearly","setup_fee":0,"app_fee":0,"fee_payer":"payee","state":"available","create_time":1387170574,"number_of_subscriptions":0,"callback_uri":"https:\/\/www.example.com\/ipn\/12345","trial_length":0,"reference_id":""}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 05:14:51 GMT
+recorded_with: VCR 2.8.0

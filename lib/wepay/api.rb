@@ -15,5 +15,9 @@ module Wepay
     def withdrawal
       Wepay::Api::Withdrawal.new
     end
+
+    def subscription_plan
+      Wepay::Api::SubscriptionPlan.new
+    end
   end
 end

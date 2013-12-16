@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage.wepayapi.com/v2/subscription_plan
+    body:
+      encoding: UTF-8
+      string: '{"subscription_plan_id":123456789}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer access_token
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 16 Dec 2013 05:12:53 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      strict-transport-security:
+      - max-age=2592000
+    body:
+      encoding: UTF-8
+      string: '{"subscription_plan_id":123456789,"account_id":123456,"name":"Subscription
+        plan 1","short_description":"Short description","currency":"USD","amount":10,"period":"yearly","setup_fee":0,"app_fee":0,"fee_payer":"payee","state":"available","create_time":1387170574,"number_of_subscriptions":0,"callback_uri":"","trial_length":0,"reference_id":""}'
+    http_version: 
+  recorded_at: Mon, 16 Dec 2013 05:12:53 GMT
+recorded_with: VCR 2.8.0

@@ -39,7 +39,7 @@ http_interactions:
       strict-transport-security:
       - max-age=2592000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: '{"account_id":123456,"account_uri":"https:\/\/stage.wepay.com\/account\/123456"}'
     http_version:
   recorded_at: Thu, 05 Dec 2013 10:46:22 GMT

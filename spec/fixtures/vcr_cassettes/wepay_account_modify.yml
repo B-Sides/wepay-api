@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"account_id":"123456", "name":"New+Account+Name"}'
-      encoding: US-ASCII
+      encoding: UTF-8
       string: account_id=123456&name=New+Account+Name
     headers:
       User-Agent:

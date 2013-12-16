@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://stage.wepayapi.com/v2/null
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
@@ -27,7 +27,7 @@ http_interactions:
       connection:
       - close
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: '{"error":"invalid_request","error_description":"that is not a recognized
         WePay API call","error_code":1001}'
     http_version:

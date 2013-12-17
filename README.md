@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/B-Sides/wepay-api.png?branch=master)](https://travis-ci.org/B-Sides/wepay-api)
+
 # wepay-api
 
 `wepay-api` is a Ruby wrapper for Wepay API.

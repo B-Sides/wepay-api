@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.8
       Authorization:
-      - Bearer <ACCESS_TOKEN>
+      - Bearer access_token
   response:
     status:
       code: 501

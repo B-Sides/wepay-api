@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["anguyen@burnsidedigital.com"]
   spec.description   = %q{Ruby Wrapper for Wepay API}
   spec.summary       = spec.description
-  spec.homepage      = "https://github.com/burnsidedigital/wepay-api"
+  spec.homepage      = "https://github.com/B-Sides/wepay-api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

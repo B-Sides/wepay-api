@@ -99,7 +99,7 @@ Wepay.account.create(
 ```
 
 #### Error/ Exception
-If an API call has errors, it will raise an Wepay::ApiError with following fields:
+If an API call has errors, it will raise a Wepay::ApiError with following fields:
   - type,     e.g. invalid_request
   - code,     e.g. 1001
   - message

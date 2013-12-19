@@ -20,15 +20,24 @@ Or install it yourself as:
 
 ```ruby
 Wepay.configure do |config|
-  config.client_id     = ...  # app id                                  (compulsory)
-  config.client_secret = ...  # app secret                              (compulsory)
-  config.access_token  = ...  # access token of the app                 (compulsory)
-  config.account_id    = ...  # caller's account id                     (compulsory)
-  config.scope         = ...  # the permission for OAuth authorization  (compulsory)
-  config.using_stage   = ...  # set to true/false                       (compulsory)
-  config.open_timeout  = 5    # default is 5 seconds                    (optional)
-  config.timeout       = 10   # default is 10 seconds                   (optional)
+  config.client_id     = ...  # app id                                     (compulsory)
+  config.client_secret = ...  # app secret                                 (compulsory)
+  config.access_token  = ...  # access token of the app                    (compulsory)
+  config.account_id    = ...  # app's account id                           (compulsory)
+  config.scope         = ...  # OAuth permissions (comma separated string) (compulsory)
+  config.using_stage   = ...  # use test environment (true/false)          (compulsory)
+  config.open_timeout  = 5    # default is 5  (seconds)                    (optional)
+  config.timeout       = 10   # default is 10 (seconds)                    (optional)
 end
+```
+
+All the configuration can be accessed later on as followings:
+
+```ruby
+Wepay.client_id
+Wepay.client_secret
+Wepay.access_token
+...
 ```
 
 ## Usage

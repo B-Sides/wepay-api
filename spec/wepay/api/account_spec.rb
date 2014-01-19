@@ -11,7 +11,7 @@ describe Wepay::Api::Account do
         access_token:   'access_token'
       )
 
-      expect(data).to have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type, :create_time
+      expect(data).to have_keys :account_id, :name, :state, :description, :type, :create_time, :country, :currencies, :balances, :statuses, :action_reasons
     end
   end
 
@@ -22,7 +22,7 @@ describe Wepay::Api::Account do
       )
 
       expect(data).to       be_a Array
-      expect(data.first).to have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type, :create_time
+      expect(data.first).to have_keys :account_id, :name, :state, :description, :type, :create_time, :country, :currencies, :balances, :statuses, :action_reasons
     end
   end
 
@@ -34,7 +34,7 @@ describe Wepay::Api::Account do
         access_token: 'access_token'
       )
 
-      expect(data).to have_keys :account_id, :account_uri
+      expect(data).to have_keys :account_id, :name, :state, :description, :type, :create_time, :country, :currencies, :balances, :statuses, :action_reasons
     end
   end
 
@@ -46,7 +46,7 @@ describe Wepay::Api::Account do
         access_token: 'access_token'
       )
 
-      expect(data).to       have_keys :account_id, :name, :state, :description, :account_uri, :payment_limit, :verification_state, :type, :create_time
+      expect(data).to have_keys :account_id, :name, :state, :description, :type, :create_time, :country, :currencies, :balances, :statuses, :action_reasons
       expect(data.name).to  eq "New Account Name"
     end
   end
@@ -63,48 +63,25 @@ describe Wepay::Api::Account do
     end
   end
 
-  describe "#balance" do
-    it "gets balance of an account" do
-      data = it.balance(
+  describe "#get_update_uri" do
+    it "gets update uri of an account" do
+      data = it.get_update_uri(
         account_id:   "123456",
         access_token: 'access_token'
       )
 
-      expect(data).to have_keys :pending_balance, :available_balance, :currency
+      expect(data).to have_keys :account_id, :uri
     end
   end
 
-  describe "#add_bank" do
-    it "adds bank to an account" do
-      data = it.add_bank(
+  describe "#get_reserve_details" do
+    it "gets reserve details of an account" do
+      data = it.get_reserve_details(
         account_id:   "123456",
         access_token: 'access_token'
       )
 
-      expect(data).to have_keys :account_id, :add_bank_uri
-    end
-  end
-
-  describe "#set_tax" do
-    it "sets tax of an account" do
-      data = it.set_tax(
-        account_id:   "123456",
-        access_token: 'access_token',
-        taxes:        [{"percent" => 10,"country" => "US","state" => "CA","zip" => "94025"}]
-      )
-
-      expect(data.first).to have_keys :percent, :country, :state, :zip
-    end
-  end
-
-  describe "#get_tax" do
-    it "gets tax of an account" do
-      data = it.get_tax(
-        account_id:   "123456",
-        access_token: 'access_token'
-      )
-
-      expect(data.first).to have_keys :percent, :country, :state, :zip
+      expect(data).to have_keys :account_id, :currency, :reserved_amount, :withdrawals_schedule
     end
   end
 end

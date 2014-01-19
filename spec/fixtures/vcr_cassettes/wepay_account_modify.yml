@@ -5,7 +5,7 @@ http_interactions:
     uri: https://stage.wepayapi.com/v2/account/modify
     body:
       encoding: UTF-8
-      string: '{"account_id":"123456", "name":"New Account Name"}'
+      string: '{"account_id":"123456","name":"New Account Name"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Fri, 13 Dec 2013 07:59:13 GMT
+      - Sun, 19 Jan 2014 02:51:58 GMT
       content-type:
       - application/json
       transfer-encoding:
@@ -29,8 +29,8 @@ http_interactions:
       connection:
       - close
       set-cookie:
-      - wepay=1gnrmnud3ajgl9l0fheg14gbj5; path=/; domain=stage.wepay.com; secure;
-        HttpOnly, wepay=1gnrmnud3ajgl9l0fheg14gbj5; path=/; domain=stage.wepay.com;
+      - wepay=rbpndaln7ou6p8becbsdp00nk6; path=/; domain=stage.wepay.com; secure;
+        HttpOnly, wepay=rbpndaln7ou6p8becbsdp00nk6; path=/; domain=stage.wepay.com;
         secure; httponly
       expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -42,8 +42,8 @@ http_interactions:
       - max-age=2592000
     body:
       encoding: UTF-8
-      string: '{"account_id":123456,"name":"New Account Name","state":"active","description":"This
-        account was created by ABC","account_uri":"https:\/\/stage.wepay.com\/account\/123456","payment_limit":"50000","verification_state":"unverified","type":"personal","auto_withdrawal":false,"create_time":1386243069,"verification_uri":"https:\/\/stage.wepay.com\/api\/account_verify\/123456\/65d2737e"}'
+      string: '{"account_id":123456,"name":"New Account Name","state":"action_required","description":"Created
+        by API","type":"personal","create_time":1390099125,"country":"US","currencies":["USD"],"balances":[{"currency":"USD","balance":0,"incoming_pending_amount":0,"outgoing_pending_amount":0,"reserved_amount":0,"disputed_amount":0,"withdrawal_period":null,"withdrawal_next_time":null,"withdrawal_bank_name":null}],"statuses":[{"currency":"USD","incoming_payments_status":"ok","outgoing_payments_status":"paused"}],"action_reasons":["kyc","bank_account"]}'
     http_version: 
-  recorded_at: Fri, 13 Dec 2013 07:59:13 GMT
+  recorded_at: Sun, 19 Jan 2014 02:51:58 GMT
 recorded_with: VCR 2.8.0

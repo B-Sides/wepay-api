@@ -5,7 +5,7 @@ http_interactions:
     uri: https://stage.wepayapi.com/v2/account/find
     body:
       encoding: UTF-8
-      string: ''
+      string: '{}'
     headers:
       User-Agent:
       - Faraday v0.8.8
@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Fri, 13 Dec 2013 07:52:42 GMT
+      - Sun, 19 Jan 2014 02:49:33 GMT
       content-type:
       - application/json
       transfer-encoding:
@@ -32,12 +32,10 @@ http_interactions:
       - max-age=2592000
     body:
       encoding: UTF-8
-      string: '[{"account_id":123456,"name":"ABC","state":"active","description":"This
-        account was created by ABC","account_uri":"https:\/\/stage.wepay.com\/account\/123456","payment_limit":"50000","verification_state":"unverified","type":"personal","auto_withdrawal":false,"create_time":1386243069,"verification_uri":"https:\/\/stage.wepay.com\/api\/account_verify\/123456\/65d2737e"},{"account_id":1245716361,"name":"Payment
-        account for ABC","state":"active","description":"This account was
-        created by ABC","account_uri":"https:\/\/stage.wepay.com\/account\/1245716361","payment_limit":"50000","verification_state":"unverified","type":"personal","auto_withdrawal":false,"create_time":1386242810,"verification_uri":"https:\/\/stage.wepay.com\/api\/account_verify\/1245716361\/65d2737e"},{"account_id":2067308492,"name":"New
-        Account","state":"active","description":"Created by API","account_uri":"https:\/\/stage.wepay.com\/account\/2067308492","payment_limit":"50000","verification_state":"unverified","type":"personal","auto_withdrawal":false,"create_time":1386240381,"verification_uri":"https:\/\/stage.wepay.com\/api\/account_verify\/2067308492\/65d2737e"},{"account_id":1234567,"name":"Test
-        account","state":"active","description":"abc","account_uri":"https:\/\/stage.wepay.com\/account\/1234567","payment_limit":"50000","verification_state":"unverified","type":"personal","auto_withdrawal":false,"create_time":1386239642,"verification_uri":"https:\/\/stage.wepay.com\/api\/account_verify\/1234567\/65d2737e"}]'
+      string: '[{"account_id":123456,"name":"New Account","state":"action_required","description":"Created
+        by API","type":"personal","create_time":1390099125,"country":"US","currencies":["USD"],"balances":[{"currency":"USD","balance":0,"incoming_pending_amount":0,"outgoing_pending_amount":0,"reserved_amount":0,"disputed_amount":0,"withdrawal_period":null,"withdrawal_next_time":null,"withdrawal_bank_name":null}],"statuses":[{"currency":"USD","incoming_payments_status":"ok","outgoing_payments_status":"paused"}],"action_reasons":["kyc","bank_account"]},{"account_id":123456,"name":"Juntobox
+        Films","state":"action_required","description":"This account was created by
+        Juntobox Films","type":"personal","create_time":1390099014,"country":"US","currencies":["USD"],"balances":[{"currency":"USD","balance":0,"incoming_pending_amount":0,"outgoing_pending_amount":0,"reserved_amount":0,"disputed_amount":0,"withdrawal_period":null,"withdrawal_next_time":null,"withdrawal_bank_name":null}],"statuses":[{"currency":"USD","incoming_payments_status":"ok","outgoing_payments_status":"paused"}],"action_reasons":["kyc","bank_account"]}]'
     http_version: 
-  recorded_at: Fri, 13 Dec 2013 07:52:42 GMT
+  recorded_at: Sun, 19 Jan 2014 02:49:33 GMT
 recorded_with: VCR 2.8.0

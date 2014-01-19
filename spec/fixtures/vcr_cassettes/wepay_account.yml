@@ -4,8 +4,8 @@ http_interactions:
     method: post
     uri: https://stage.wepayapi.com/v2/account
     body:
-       encoding: UTF-8
-       string: '{"account_id":"123456"}'
+      encoding: UTF-8
+      string: '{"account_id":123456}'
     headers:
       User-Agent:
       - Faraday v0.8.8
@@ -16,12 +16,12 @@ http_interactions:
   response:
     status:
       code: 200
-      message:
+      message: 
     headers:
       server:
       - nginx
       date:
-      - Thu, 05 Dec 2013 10:46:19 GMT
+      - Sun, 19 Jan 2014 02:47:04 GMT
       content-type:
       - application/json
       transfer-encoding:
@@ -32,7 +32,8 @@ http_interactions:
       - max-age=2592000
     body:
       encoding: UTF-8
-      string: '{"account_id":123456,"name":"Test account","state":"active","description":"abc","account_uri":"https:\/\/stage.wepay.com\/account\/123456","payment_limit":50000,"verification_state":"unverified","type":"personal","auto_withdrawal":false,"create_time":1386239642,"verification_uri":"https:\/\/stage.wepay.com\/api\/account_verify\/123456\/d953f41e"}'
-    http_version:
-  recorded_at: Thu, 05 Dec 2013 10:46:19 GMT
+      string: '{"account_id":123456,"name":"New Account","state":"action_required","description":"Created
+        by API","type":"personal","create_time":1390099125,"country":"US","currencies":["USD"],"balances":[{"currency":"USD","balance":0,"incoming_pending_amount":0,"outgoing_pending_amount":0,"reserved_amount":0,"disputed_amount":0,"withdrawal_period":null,"withdrawal_next_time":null,"withdrawal_bank_name":null}],"statuses":[{"currency":"USD","incoming_payments_status":"ok","outgoing_payments_status":"paused"}],"action_reasons":["kyc","bank_account"]}'
+    http_version: 
+  recorded_at: Sun, 19 Jan 2014 02:47:05 GMT
 recorded_with: VCR 2.8.0

@@ -62,6 +62,9 @@ Wepay.get_access_token(code, redirect_uri)
 Refer to [https://stage.wepay.com/developer/reference/oauth2#token](https://stage.wepay.com/developer/reference/oauth2#token) for more details.
 
 ### API
+#### API version
+`2014-01-08`
+
 #### Available API
   - [/account](lib/wepay/api/account.rb)
   - [/checkout](lib/wepay/api/checkout.rb)

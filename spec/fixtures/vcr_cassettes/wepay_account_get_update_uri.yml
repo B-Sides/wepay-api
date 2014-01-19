@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://stage.wepayapi.com/v2/account/get_tax
+    uri: https://stage.wepayapi.com/v2/account/get_update_uri
     body:
       encoding: UTF-8
-      string: '{"account_id":123456"}'
+      string: '{"account_id":"123456"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Mon, 16 Dec 2013 03:05:17 GMT
+      - Sun, 19 Jan 2014 02:55:46 GMT
       content-type:
       - application/json
       transfer-encoding:
@@ -32,7 +32,7 @@ http_interactions:
       - max-age=2592000
     body:
       encoding: UTF-8
-      string: '[{"zip":94025,"state":"CA","country":"US","percent":10}]'
+      string: '{"account_id":123456,"uri":"https:\/\/stage.wepay.com\/api\/account_update\/123456"}'
     http_version: 
-  recorded_at: Mon, 16 Dec 2013 03:05:19 GMT
+  recorded_at: Sun, 19 Jan 2014 02:55:46 GMT
 recorded_with: VCR 2.8.0

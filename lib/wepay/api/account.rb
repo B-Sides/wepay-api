@@ -49,37 +49,19 @@ module Wepay
       ##
       # @param params [Hash] See documentation below
       # @return [Hashie::Mash]
-      # @docs [/account/balance](https://www.wepay.com/developer/reference/account#balance)
+      # @docs [/account/get_update_uri](https://www.wepay.com/developer/reference/account#update_uri)
       #
-      def balance(params)
-        post 'account/balance', params
+      def get_update_uri(params)
+        post 'account/get_update_uri', params
       end
 
       ##
       # @param params [Hash] See documentation below
       # @return [Hashie::Mash]
-      # @docs [/account/add_bank](https://www.wepay.com/developer/reference/account#add_bank)
+      # @docs [/account/get_reserve_details](https://www.wepay.com/developer/reference/account#reserve)
       #
-      def add_bank(params)
-        post 'account/add_bank', params
-      end
-
-      ##
-      # @param params [Hash] See documentation below
-      # @return [Hashie::Mash]
-      # @docs [/account/set_tax](https://www.wepay.com/developer/reference/account#set_tax)
-      #
-      def set_tax(params)
-        post 'account/set_tax', params
-      end
-
-      ##
-      # @param params [Hash] See documentation below
-      # @return [Hashie::Mash]
-      # @docs [/account/get_tax](https://www.wepay.com/developer/reference/account#get_tax)
-      #
-      def get_tax(params)
-        post 'account/get_tax', params
+      def get_reserve_details(params)
+        post 'account/get_reserve_details', params
       end
     end
   end

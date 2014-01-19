@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Fri, 13 Dec 2013 08:01:54 GMT
+      - Sun, 19 Jan 2014 02:54:20 GMT
       content-type:
       - application/json
       transfer-encoding:
@@ -29,8 +29,8 @@ http_interactions:
       connection:
       - close
       set-cookie:
-      - wepay=u9p97k43btg1qi7j99od7n6s00; path=/; domain=stage.wepay.com; secure;
-        HttpOnly, wepay=u9p97k43btg1qi7j99od7n6s00; path=/; domain=stage.wepay.com;
+      - wepay=s3hhk1lnrio53rmdq1079bq2h7; path=/; domain=stage.wepay.com; secure;
+        HttpOnly, wepay=s3hhk1lnrio53rmdq1079bq2h7; path=/; domain=stage.wepay.com;
         secure; httponly
       expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -44,5 +44,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"account_id":123456,"state":"deleted"}'
     http_version: 
-  recorded_at: Fri, 13 Dec 2013 08:01:55 GMT
+  recorded_at: Sun, 19 Jan 2014 02:54:20 GMT
 recorded_with: VCR 2.8.0
